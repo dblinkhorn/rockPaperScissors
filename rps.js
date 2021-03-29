@@ -14,7 +14,7 @@ let playerSelection;
 
 // sets variable to the html element with id="rock"
 let rock = document.getElementById("rock");
-// if rock is clicked
+// if rock element is clicked
 rock.addEventListener("click", function () {
     // set variable to rock
     playerSelection = "rock";
@@ -72,9 +72,9 @@ function playRound(playerSelection) {
         txt = "The computer chose paper.\r\nYou lost... Paper beats rock.";
         document.getElementById("status").innerHTML = typeWriter(txt);
         txt = "\r\nYou lost... Paper beats rock.";
-        document.getElementById("declareWinner").innerHTML = typeWriter(txt);
+        document.getElementById("status").innerHTML = typeWriter(txt);
         // update score
-        document.getElementById("status").innerHTML = `<br>${computerScore}`;
+        document.getElementById("computer-score").innerHTML = `<br>${computerScore}`;
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         computerScore += 1;
         document.getElementById("status").innerHTML = "<p>The computer chose scissors.</p><p><br>You lost... Scissors beats paper.</p>";
