@@ -99,14 +99,14 @@ function checkWinner(pScore, cScore) {
         disableButtons();
         document.getElementById("status-top").innerHTML = `Your ${playerSelection} beats ${computerSelection}.`;
         document.getElementById("status-middle").innerHTML = "<strong>You win the game!</strong><br><br><button class='grow' id='play-again'>PLAY AGAIN?</button>";
-        document.getElementById("status-bottom").innerHTML = "";
+        document.getElementById("status-bottom").innerHTML = " ";
     }
 
     if (cScore === 5) {
         disableButtons();
         document.getElementById("status-top").innerHTML = `${playerSelection} beats your ${computerSelection}.`;
-        document.getElementById("status-middle").innerHTML = "<strong>The computer wins the game!</strong><br><br><button class='grow' id='play-again'>PLAY AGAIN?</button><";
-        document.getElementById("status-bottom").innerHTML = "";
+        document.getElementById("status-middle").innerHTML = "<strong>The computer wins the game!</strong><br><br><button class='grow' id='play-again'>PLAY AGAIN?</button>";
+        document.getElementById("status-bottom").innerHTML = " ";
     }
         console.log(`resetScores computer score = ${computerScore}.`);
         console.log(`resetScores player score = ${playerScore}.`);
