@@ -48,12 +48,32 @@ playAgain.addEventListener("click", function () {
     resetScores();
 })
 
-// variables to use in declareWinner function depending on round winner
+// variables to use in declareWinner function depending on round winner below
 winResult = "You won!"
 loseResult = "You lost..."
 winMessage = "Keep it up!"
 loseMessage = "Better luck next round!"
 
+// variables used in typeWriter function below
+var string = "ROCK, PAPER, SCISSORS!";
+var i = 0;
+var speed = 20;
+
+
+// function to give header text a typewriter effect on page load
+function typeWriter(string, element, counter) {
+  setTimeout(()=> {
+
+  if (counter < string.length) {
+    document.getElementById(element).innerHTML += string.charAt(counter);
+    counter++;
+    typeWriter(string, element, counter)
+  }
+  }, 75)
+}
+
+// type out the header text on page load
+typeWriter(string, "header", i);
 
 // function used in main playRound function to avoid lots of repeat code
 function declareWinner(result, message) {
