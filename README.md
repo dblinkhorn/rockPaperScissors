@@ -1,2 +1,5 @@
-Rock, Paper, Scissors project from The Odin Project.
-Goal is to create a rock, paper, scissors game in Javascript which you play against the computer and in the console.
+# Rock, Paper, Scissors
+
+Webapp version of classic rock, paper, scissors game against computer player.
+
+LIVE VERSION: https://dblinkhorn.github.io/rock-paper-scissors/
